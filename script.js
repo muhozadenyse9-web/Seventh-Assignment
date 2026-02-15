@@ -11,3 +11,33 @@ const tags = document.querySelectorAll(".tag");
 const backToTop = document.querySelector("#backToTop");
 const navLinks = document.querySelectorAll(".nav-link");
 const mainTitle = document.querySelector("#mainTitle");
+// ==========================
+// ENGAGEMENT SCORE
+// ==========================
+function updateScore() {
+  score++;
+  scoreDisplay.innerText = score;
+
+  if (score >= 10) {
+    scoreDisplay.classList.add("text-yellow-500");
+  }
+}
+
+likeButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    button.innerText = "✓ Liked";
+    button.classList.add("font-bold");
+    updateScore();
+  });
+});
+// ==========================
+// REAL-TIME SEARCH
+// ==========================
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+
+  posts.forEach(post => {
+    const text = post.innerText.toLowerCase();
+    post.style.display = text.includes(query) ? "block" : "none";
+  });
+});
