@@ -41,3 +41,20 @@ searchInput.addEventListener("input", () => {
     post.style.display = text.includes(query) ? "block" : "none";
   });
 });
+// ==========================
+// TAG FILTERING
+// ==========================
+tags.forEach(tag => {
+  tag.addEventListener("click", () => {
+    const selectedTag = tag.dataset.tag.toLowerCase();
+
+    posts.forEach(post => {
+      const postTags = post.dataset.tags.toLowerCase();
+      post.style.display = postTags.includes(selectedTag)
+        ? "block"
+        : "none";
+    });
+
+    mainTitle.innerText = "JANE BLOGLIFE - " + tag.dataset.tag;
+  });
+});
