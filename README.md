@@ -1,0 +1,3 @@
+Jane Bloglife
+
+Jane Bloglife is a personal fashion blog showcasing lifestyle and fashion posts, focusing on hats, runway events, and seasonal trends. Built with HTML, Tailwind CSS, and JavaScript, it features a responsive design, blog posts with images and like buttons, a search bar, engagement score, and a sidebar with profile info and tag filters. Users can navigate easily with a fixed top menu and a "Back to Top" button. Future enhancements include adding a backend, comments, and analytics.
