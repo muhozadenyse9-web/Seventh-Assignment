@@ -7,5 +7,164 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="script.js" defer></script>
 </head>
+<body class="bg-gray-100 font-sans">
 
+<!-- NAVIGATION -->
+<nav class="bg-black text-white fixed w-full z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <div class="space-x-6">
+      <a href="#home" class="nav-link hover:text-gray-300">Home</a>
+      <a href="#posts" class="nav-link hover:text-gray-300">Posts</a>
+      <a href="#about" class="nav-link hover:text-gray-300">About</a>
+    </div>
+
+    <div>
+      Engagement Score:
+      <span id="scoreDisplay" class="font-bold">0</span>
+    </div>
+  </div>
+</nav>
+
+<div class="max-w-7xl mx-auto pt-28">
+
+  <!-- HEADER -->
+  <header id="home" class="bg-white text-center py-12 shadow">
+    <h1 id="mainTitle" class="text-5xl font-bold mb-4 tracking-wide">
+      JANE BLOGLIFE
+    </h1>
+    <p class="mb-6 text-gray-600">
+      Welcome to the blog of Jane's world
+    </p>
+
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Search blog posts..."
+      class="border p-3 w-1/2"
+    >
+  </header>
+
+  <!-- HERO IMAGE -->
+  <section class="mt-8">
+    <img src="jane.jpg" class="w-full h-[500px] object-cover">
+  </section>
+
+  <!-- MAIN GRID -->
+  <div class="grid lg:grid-cols-3 gap-8 mt-10" id="posts">
+
+    <!-- BLOG POSTS -->
+    <div class="lg:col-span-2 space-y-8">
+
+      <!-- POST 1 -->
+      <article class="blog-post bg-white p-6 shadow"
+        data-tags="Hats,Fashion">
+
+        <h3 class="post-title text-2xl font-semibold mb-2">
+          More Hats
+        </h3>
+        <p class="text-sm text-gray-500 mb-4">
+          May 2, 2016
+        </p>
+
+        <img src="girl_hat.jpg" class="w-full mb-4">
+
+        <p class="mb-4">
+          I am crazy about hats these days. Fashion trends evolve constantly.
+        </p>
+
+        <button class="like-btn border px-4 py-2 hover:bg-gray-100">
+          👍 Like
+        </button>
+      </article>
+
+      <!-- POST 2 -->
+      <article class="blog-post bg-white p-6 shadow"
+        data-tags="Hats,Men">
+
+        <h3 class="post-title text-2xl font-semibold mb-2">
+          Hats for Men
+        </h3>
+        <p class="text-sm text-gray-500 mb-4">
+          April 23, 2016
+        </p>
+
+        <img src="man_hat.jpg" class="w-full mb-4">
+
+        <p class="mb-4">
+          The trend this summer is hats for men.
+        </p>
+
+        <button class="like-btn border px-4 py-2 hover:bg-gray-100">
+          👍 Like
+        </button>
+      </article>
+
+      <!-- POST 3 -->
+      <article class="blog-post bg-white p-6 shadow"
+        data-tags="Runway,NewYork">
+
+        <h3 class="post-title text-2xl font-semibold mb-2">
+          Runway Show
+        </h3>
+        <p class="text-sm text-gray-500 mb-4">
+          April 7, 2016
+        </p>
+
+        <img src="runway.jpg" class="w-full mb-4">
+
+        <p class="mb-4">
+          The runway in New York City this weekend is legendary.
+        </p>
+
+        <button class="like-btn border px-4 py-2 hover:bg-gray-100">
+          👍 Like
+        </button>
+      </article>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside id="about" class="space-y-8">
+
+      <div class="bg-white p-6 shadow">
+        <img src="avatar_girl2.jpg" class="w-full mb-4">
+        <h4 class="font-bold mb-2">My Name</h4>
+        <p class="text-gray-600">
+          Just me exploring fashion inspiration and trends.
+        </p>
+      </div>
+
+      <!-- TAG CLOUD -->
+      <div class="bg-white p-6 shadow">
+        <h4 class="font-bold mb-4">Tags</h4>
+
+        <div class="flex flex-wrap gap-2">
+          <span class="tag bg-black text-white px-3 py-1 cursor-pointer"
+            data-tag="Hats">Hats</span>
+
+          <span class="tag bg-gray-200 px-3 py-1 cursor-pointer"
+            data-tag="Fashion">Fashion</span>
+
+          <span class="tag bg-gray-200 px-3 py-1 cursor-pointer"
+            data-tag="Runway">Runway</span>
+
+          <span class="tag bg-gray-200 px-3 py-1 cursor-pointer"
+            data-tag="Men">Men</span>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+</div>
+
+<!-- BACK TO TOP -->
+<button
+  id="backToTop"
+  class="hidden fixed bottom-8 right-8 bg-black text-white px-4 py-2"
+>
+  ↑ Top
+</button>
+
+</body>
+</html>
 </html>
