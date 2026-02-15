@@ -68,3 +68,13 @@ window.addEventListener("scroll", () => {
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+// ==========================
+// SMOOTH NAVIGATION
+// ==========================
+navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    target.scrollIntoView({ behavior: "smooth" });
+  });
+});
