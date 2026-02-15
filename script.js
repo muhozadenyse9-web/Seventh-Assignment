@@ -58,3 +58,13 @@ tags.forEach(tag => {
     mainTitle.innerText = "JANE BLOGLIFE - " + tag.dataset.tag;
   });
 });
+// ==========================
+// BACK TO TOP
+// ==========================
+window.addEventListener("scroll", () => {
+  backToTop.classList.toggle("hidden", window.scrollY < 200);
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
